@@ -10,7 +10,7 @@ def parsen():
     cor_id = str(random.randint(1, 86816))
     print(cor_id)
 
-    #GET Request fuer die erzeute korrelation
+    #GET Request fuer die erzeugte korrelation
     #ReOb ist jetzt die HTML Antwort
     url = "https://tylervigen.com/view_correlation?id="+cor_id
     ReOb = re.get(url)
@@ -20,8 +20,11 @@ def parsen():
     if(ReOb.status_code != 200):
         print("Irgendetwas hat nicht geklappt. HTML-Status-Code: "+str(ReOb.status_code))
         return 0
+
+    #Wenn GET Request erfolgreich html Seite mit BeautifulSoup bearbeiten    
     soup = BeautifulSoup(ReOb.content, 'html.parser')
 
+    #Kram zum testen
     title = soup.find(attrs={'name': 'title'})
     print(soup)
 
