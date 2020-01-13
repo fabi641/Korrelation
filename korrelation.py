@@ -1,9 +1,11 @@
 import requests
 re = requests
 import random
-from lxml import html
 from bs4 import BeautifulSoup
 
+#Objekt, welches von parsen() zurueckgegeben wird und alle Infos
+#ueber die random korrelation enthaelt, die fuer den tweet
+#benoetigt werden
 class KorrOb:
     url = ""
     title = ""
