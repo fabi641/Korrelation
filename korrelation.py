@@ -24,9 +24,8 @@ def parsen():
     #Wenn GET Request erfolgreich html Seite mit BeautifulSoup bearbeiten    
     soup = BeautifulSoup(ReOb.content, 'html.parser')
 
-    #Kram zum testen
-    title = soup.find(attrs={'name': 'title'})
-    print(soup)
+    #Name der Korrelation
+    KorrName = soup.meta.get('content')
 
 
 parsen()
