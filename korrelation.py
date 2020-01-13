@@ -27,5 +27,9 @@ def parsen():
     #Name der Korrelation
     KorrName = soup.meta.get('content')
 
+    #Bild-URL bekommen
+    #Ist immer das zweite Bild auf der Seite
+    Bild = soup.find_all('img')
+    print(Bild[1].get('src'))
 
 parsen()
