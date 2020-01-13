@@ -4,7 +4,14 @@ import random
 from lxml import html
 from bs4 import BeautifulSoup
 
+class KorrOb:
+    url = ""
+    title = ""
+
 def parsen():
+
+    Korri = KorrOb
+
     #Zahl fue dir id generieren. Diese ist der unique identifier 
     #fuer eine Korrelation. Aktuell sind es 86816 erzeugte Korrelationsgrafiken.
     cor_id = str(random.randint(1, 86816))
@@ -30,6 +37,14 @@ def parsen():
     #Bild-URL bekommen
     #Ist immer das zweite Bild auf der Seite
     Bild = soup.find_all('img')
-    print(Bild[1].get('src'))
+    Bildurl = Bild[1].get('src')
 
-parsen()
+    #Objekt zum zurueckgeben erstellen
+    Korri.title = KorrName
+    Korri.url = "https://tylervigen.com/"+Bildurl
+
+    return Korri
+
+Korrelation = parsen()
+print(Korrelation.url)
+print(Korrelation.title)
