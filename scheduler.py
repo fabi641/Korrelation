@@ -1,15 +1,19 @@
 import schedule
 import time
 import tweet
+import korrelation
 
 i = 0
 Zeit = "15:00"
 
 #tweetet einen korrelations tweet und schreibt ihn auch nochmal in die shell
 def korrelieren():
+    #holt sich ein objekt mit der URL und dem namen der Korrelation
+    Korrelation = korrelation.parsen()
     print("Tweet this:\n")
     print("-------------------------------------")
-    tweet.tweet()
+    tweet.tweet(Korrelation.url, Korrelation.title)
+    print(Korrelation.url)
     print("-------------------------------------")
 
 
