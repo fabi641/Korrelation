@@ -10,6 +10,13 @@ class KorrOb:
     url = ""
     title = ""
 
+#gibt die aktuell maximale id zurueck
+#dise steht auf jeder Korrelationsseite
+#daher immer auf der mit ID=1 nachschauen
+def max_id():
+
+    url = "https://tylervigen.com/view_correlation?id=1"
+
 def parsen():
 
     Korri = KorrOb
