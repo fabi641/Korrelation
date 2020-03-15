@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 class KorrOb:
     url = ""
     title = ""
+    website = ""
 
 #gibt die aktuell maximale id zurueck
 #dise steht auf jeder Korrelationsseite
@@ -78,6 +79,7 @@ def parsen():
     #Objekt zum zurueckgeben erstellen
     Korri.title = KorrName
     Korri.url = "https://tylervigen.com/"+Bildurl
+    Korri.website = url
 
     return Korri
 
