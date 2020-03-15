@@ -12,7 +12,7 @@ def korrelieren():
     Korrelation = korrelation.parsen()
     print("Tweet this:\n")
     print("-------------------------------------")
-    tweet.tweet(Korrelation.url, Korrelation.title)
+    tweet.tweet(Korrelation.url, Korrelation.title, Korrelation.website)
     print(Korrelation.url)
     print("-------------------------------------")
 
@@ -29,6 +29,7 @@ print("---------------------------------------------\n")
 print("Jeden Tag um "+ Zeit +" Uhr gibt's Korrelationen!")
 print("Starting Korrelation...")
 print("Es ist: "+ time.strftime("%d.%m.%Y %H:%M:%S"))
+
 
 #Dauerschleife
 while True:
