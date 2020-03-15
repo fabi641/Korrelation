@@ -11,5 +11,5 @@ api = twitter.Api(consumer_key=keys.consumer_key,
                   access_token_secret=keys.access_token_secret)
 
 
-def tweet(picUrl, status):
-    api.PostUpdate(status, media = picUrl)
+def tweet(picUrl, status, website):
+    api.PostUpdate(status+"\n"+website, media = picUrl)
