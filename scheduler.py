@@ -10,7 +10,7 @@ def korrelieren():
     Korrelation = korrelation.parsen()
     print("Tweet this:\n")
     print("-------------------------------------")
-#    tweet.tweet(Korrelation.url, Korrelation.title, Korrelation.website)
+    tweet.tweet(Korrelation.url, Korrelation.title, Korrelation.website)
     print(Korrelation.url + "\n" + Korrelation.title)
     print("-------------------------------------")
 
