@@ -1,0 +1,10 @@
+In python-twitter s twitter_utils.py the http_to_file def has to be changed to:
+
+def http_to_file(http):
+    data_file = NamedTemporaryFile()
+    req = requests.get(http, stream=True, headers={"User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36"})
+    for chunk in req.iter_content(chunk_size=1024 * 1024):
+        data_file.write(chunk)
+    return data_file
+
+    because tyler spurious correlation site blocks get request with python header
