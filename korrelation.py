@@ -17,7 +17,7 @@ class KorrOb:
 def max_id():
 
     url = "https://tylervigen.com/view_correlation?id=1"
-    ReOb = re.get(url)
+    ReOb = re.get(url, headers={"User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36"})
 
     #Ueberpruefen, ob Status Code 200
     if(ReOb.status_code != 200):
@@ -55,7 +55,7 @@ def parsen():
     #GET Request fuer die erzeugte korrelation
     #ReOb ist jetzt die HTML Antwort
     url = "https://tylervigen.com/view_correlation?id="+cor_id
-    ReOb = re.get(url)
+    ReOb = re.get(url, headers={"User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36"})
    
     #/debug
     #print(ReOb)
