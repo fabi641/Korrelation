@@ -43,7 +43,8 @@ def parsen():
     Korri = KorrOb
 
     #Anzahl an vorhandenen Korrelationen abfragen
-    max_cor_id = max_id()
+    #max_id is no longer looked up from the page, because the website changed in a way, that this inforamtion is no longer available. 92688 is the last correlation, in which the picture is not broken.
+    max_cor_id = 92688  #max_id()
 
     #Zahl fue dir id generieren. Diese ist der unique identifier 
     #fuer eine Korrelation. Aktuell sind es 86816 erzeugte Korrelationsgrafiken.
